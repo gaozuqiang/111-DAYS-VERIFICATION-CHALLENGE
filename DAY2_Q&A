@@ -1,0 +1,47 @@
+1. what are the basic logic gates. Explain in truth table:
+AND Gate:
+A	B	Output (A AND B)
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+OR Gate:
+A	B	Output (A OR B)
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+NOT Gate
+A	Output (NOT A)
+0	1
+1	0
+NAND Gate
+A	B	Output (A NAND B)
+0	0	1
+0	1	1
+1	0	1
+1	1	0
+NOR Gate
+A	B	Output (A NOR B)
+0	0	1
+0	1	0
+1	0	0
+1	1	0
+XOR Gate
+A	B	Output (A XOR B)
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+XNOR Gate
+A	B	Output (A XNOR B)
+0	0	1
+0	1	0
+1	0	0
+1	1	1
+2. why are NAND & NOR called universal gate? what are advantages of universal gate.
+NAND and NOR gates are called universal gates because they can be used to implement any other logic gate (AND, OR, NOT, XOR, etc.) or any logical function in digital electronics.
+4.what are the application of NAND & NOR gate.
+THey and be use for any other logic gate,ALU, memory device, etc...
+7. what happen if more than one input is applied to a logic gate?
+It would take all the input and apply logic operation to get a output
