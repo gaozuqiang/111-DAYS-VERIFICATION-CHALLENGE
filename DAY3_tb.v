@@ -1,0 +1,80 @@
+module Day3_tb();
+reg [9:0] decimal;
+wire [3:0] dcb;
+reg [7:0] octal;
+wire [2:0] binary;
+reg [2:0] binary1;
+wire [7:0] octal1;
+reg [3:0] in;
+wire [1:0] y;
+
+decimaltoDCBencoder DCBencoder(.decimal(decimal),.dcb(dcb));
+encoder8to3 encoder8_3(.octal(octal),.binary(binary));
+decoder3to8 decoder3_8(.binary1(binary1),.octal1(octal1));
+priority_encoder_4to2 encoder4_2(.in(in),.y(y));
+
+initial begin
+    $dumpfile("DAY3.vcd");
+    $dumpvars(0,Day3_tb);
+    decimal=10'b0000000001;#10;
+    $display("decimal=%b| dcb=%b",decimal,dcb);
+    decimal=10'b0000000010;#10;
+    $display("decimal=%b| dcb=%b",decimal,dcb); 
+    decimal=10'b0000000100;#10;
+    $display("decimal=%b| dcb=%b",decimal,dcb); 
+    decimal=10'b0000001000;#10;
+    $display("decimal=%b| dcb=%b",decimal,dcb);
+    decimal=10'b0000010000;#10;
+    $display("decimal=%b| dcb=%b",decimal,dcb);
+    decimal=10'b0000100000;#10;
+    $display("decimal=%b| dcb=%b",decimal,dcb); 
+    decimal=10'b0001000000;#10; 
+    $display("decimal=%b| dcb=%b",decimal,dcb);
+    decimal=10'b0010000000;#10; 
+    $display("decimal=%b| dcb=%b",decimal,dcb);
+    decimal=10'b0100000000;#10; 
+    $display("decimal=%b| dcb=%b",decimal,dcb);
+    decimal=10'b1000000000;#10;
+    $display("decimal=%b| dcb=%b",decimal,dcb);
+    octal=8'b00000001;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    octal=8'b00000010;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    octal=8'b00000100;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    octal=8'b00001000;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    octal=8'b00010000;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    octal=8'b00100000;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    octal=8'b01000000;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    octal=8'b10000000;#10;
+    $display("octal=%b| binary=%b", octal,binary);
+    binary1=3'b001;#10;
+    $display("binary1=%b| octal1=%b", binary1,octal1);
+    binary1=3'b010;#10;
+    $display("binary1=%b| octal1=%b", binary1,octal1);
+    binary1=3'b011;#10;
+    $display("binary1=%b| octal1=%b", binary1,octal1);
+    binary1=3'b100;#10;
+    $display("binary1=%b| octal1=%b", binary1,octal1);
+    binary1=3'b101;#10;
+    $display("binary1=%b| octal1=%b", binary1,octal1);
+    binary1=3'b110;#10;
+    $display("binary1=%b| octal1=%b", binary1,octal1);
+    binary1=3'b111;#10;
+    $display("binary1=%b| octal1=%b", binary1,octal1);
+    in[3]=1'b1;#10;
+    $display("in=%b| y=%b", in,y);
+    in[3]=0;in[2]=1'b1;#10;
+    $display("in=%b| y=%b", in,y);
+    in[2]=0;in[1]=1'b1;#10;
+    $display("in=%b| y=%b", in,y);
+    in[1]=0;in[0]=1'b1;#10;
+    $display("in=%b| y=%b", in,y);
+   
+end
+
+endmodule

@@ -1,0 +1,12 @@
+2. Explain difference between:
+Encoder: Converts input data into a different representation, often more compact or structured.
+Decoder: Reconstruct the encoded data back to its orginary form
+Priority encoder: Similar to encoder but it handle multiple input by assign priority to highest-order input.
+
+3. Explain application of:
+priority encoder: Interruption handling in microprocessor(multiple input deivce: keyboard,mouse...)
+priority Decoder: Memory Address decoding(ensure highest-priority memory is accessed first.)
+
+4. Explain function:
+digital encoder: Converts multiple input signals into a coded binary output
+digital decoder: deconstruct a binary coded input into a set of output signals.
