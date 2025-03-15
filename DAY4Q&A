@@ -1,0 +1,22 @@
+1. Explain:
+4-bit ring counter:a  type of shift register that circulated a single bit in a circular fashion.
+1st clk:1000 2nd clk:0100 3rd clk:0010 4th clk:0001 ...
+4-bit johnson counter: similar to ring counter but it feeds the complement of the output back.
+1st clk: 1000.
+2nd clk: 1100
+3rd clk: 1110.
+4th clk: 1111.
+5th clk: 0111.
+6th clk: 0011.
+7th clk: 0001.
+8th clk: 0000
+3-bit ripple counter:an asynchronous counter where the output of one flip-flop serves as the clock input for the next flip-flop.
+Dedcade counter: A decade counter counts ten different states and then reset to its initial states. A simple decade counter will count from 0 to 9
+2. Difference:
+Timer:Measures or generates time interval	
+Counter:Counts events or clock pulses.
+synchronous: all operation happen under a single clock signal
+asynchronous:Operations are not synchronized to a common clock signal. Changes occur based on events or the completion of previous operations.
+3. Explain 555 timer IC:
+The 555 timer IC is one of the most popular and versatile integrated circuits (ICs) used in electronics. 
+It can function as a timer, oscillator, or pulse generator and is widely used in applications like signal generation, timing circuits, and control systems. 
